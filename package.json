@@ -1,0 +1,38 @@
+{
+  "name": "nodetsam",
+  "version": "1.0.0",
+  "description": "The back-end of nodetsam",
+  "main": "server.js",
+  "dependencies": {
+    "babel-cli": "6.14.0",
+    "babel-core": "6.14.0",
+    "express": "4.13.3",
+    "fs": "0.0.2",
+    "sql.js": "0.3.2"
+  },
+  "scripts": {
+    "start": "babel-node server.js",
+    "server": "babel-node server.js",
+    "client": "babel-node start-client.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3vgru/nodetsam.git"
+  },
+  "author": "Ed Knutson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d3vgru/nodetsam/issues"
+  },
+  "homepage": "https://github.com/d3vgru/nodetsam#readme",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "eslint": "3.15.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0"
+  }
+}

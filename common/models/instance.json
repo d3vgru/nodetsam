@@ -19,6 +19,9 @@
     },
     "terms": {
       "type": "string"
+    },
+    "feedAddress": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -49,6 +52,16 @@
       "foreignKey": ""
     },
     "mutedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
+    },
+    "subscribedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "subscribedInstances": {
       "type": "hasMany",
       "model": "Instance",
       "foreignKey": ""

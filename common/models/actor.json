@@ -25,6 +25,24 @@
     },
     "location": {
       "type": "geopoint"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "feedAddress": {
+      "type": "string"
+    },
+    "hubAddress": {
+      "type": "string"
+    },
+    "replyAddress": {
+      "type": "string"
+    },
+    "replyType": {
+      "type": "string",
+      "required": true,
+      "default": "salmon"
     }
   },
   "validations": [],

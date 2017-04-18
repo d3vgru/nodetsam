@@ -4,12 +4,12 @@ A pure JavaScript OStatus client/server framework.
 The idea is to have a very lightweight server and a pretty thick client.
 Both should be compatible with Mastodon and GNU social.
 
-It should be (slightly less easy) to replace the back-end of a compatible instance while leaving their front-end intact.
-The server will have a standard reference implementation.
-P2P functionality will be configurable. Even if turned on, it should not break standards-compliant clients.
-
 It should be (relatively) easy to point the client to a compatible instance.
-The client will have a standard reference implementation without P2P functionality.
+The client will have a standard React reference implementation without P2P functionality.
+
+It should be (slightly less easy) to replace the back-end of a compatible instance while leaving their front-end intact.
+The server will have a standard reference implementation based on LoopBack.
+P2P functionality will be configurable. Even if turned on, it should not break standards-compliant clients.
 
 ## Authentication
 * client posts have to be processed by instance (including replies, stars, boosts)
@@ -21,11 +21,11 @@ The client will have a standard reference implementation without P2P functionali
   
   -client should be able to connect to any instance that conforms to standards
 
-* Babel for ES6 support
+* Babel for ES2016+ support
 
 ## High-level (back-end / instance)
 * strict implementation of OStatus standards
-* should be very light weight
+* should be very light weight (LoopBack API)
 * define requirements of server to support standard client
 * instance would maintain DHT node list to seed newly started clients
 * every hour, snapshot of public feed published along with hash(es)
@@ -47,7 +47,7 @@ The client will have a standard reference implementation without P2P functionali
 
   -local storage
 
-  -JS framework (probably React) --> browserify? (bridges to frameworks)
+  -JS view framework (React + ??? + Webpack)
    https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577fcvxzjvbuj
 
   -async/promises

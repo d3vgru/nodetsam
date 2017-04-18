@@ -7,8 +7,8 @@
   },
   "properties": {
     "hash": {
-      "id": true,
       "type": "string",
+      "id": true,
       "required": true
     },
     "mimeType": {

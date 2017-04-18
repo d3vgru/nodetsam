@@ -22,7 +22,38 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "logoFile": {
+      "type": "hasOne",
+      "model": "File",
+      "foreignKey": ""
+    },
+    "actors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "blockedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "mutedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "blockedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
+    },
+    "mutedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

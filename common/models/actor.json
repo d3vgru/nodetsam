@@ -15,7 +15,7 @@
       "type": "string",
       "required": true
     },
-    "name": {
+    "displayName": {
       "type": "string",
       "required": true
     },
@@ -28,7 +28,63 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "iconFile": {
+      "type": "hasOne",
+      "model": "File",
+      "foreignKey": ""
+    },
+    "headerFile": {
+      "type": "hasOne",
+      "model": "File",
+      "foreignKey": ""
+    },
+    "instance": {
+      "type": "belongsTo",
+      "model": "Instance",
+      "foreignKey": ""
+    },
+    "posts": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": ""
+    },
+    "starredPosts": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": ""
+    },
+    "followers": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "following": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "blockedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "mutedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "blockedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
+    },
+    "mutedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

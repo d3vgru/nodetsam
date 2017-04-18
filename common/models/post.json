@@ -26,7 +26,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "files": {
+      "type": "hasMany",
+      "model": "File",
+      "foreignKey": ""
+    },
+    "actor": {
+      "type": "belongsTo",
+      "model": "Actor",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

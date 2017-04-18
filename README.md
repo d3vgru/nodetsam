@@ -26,6 +26,8 @@ P2P functionality will be configurable. Even if turned on, it should not break s
   -instances will conform to standards, adding additional info safely
   
   -client should be able to connect to any instance that conforms to standards
+  
+  -standards in question are: OStatus, ActivityPub
 
 * Babel for ES2016+ support
 

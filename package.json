@@ -1,6 +1,6 @@
 {
   "name": "nodetsam",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "The back-end of nodetsam",
   "main": "server/server.js",
   "dependencies": {
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
     "concurrently": "^3.4.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",

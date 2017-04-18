@@ -34,5 +34,21 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Actor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Instance": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Post": {
+    "dataSource": "db",
+    "public": true
+  },
+  "File": {
+    "dataSource": "db",
+    "public": true
   }
 }

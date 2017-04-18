@@ -1,0 +1,33 @@
+{
+  "name": "File",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "hash": {
+      "id": true,
+      "type": "string",
+      "required": true
+    },
+    "mimeType": {
+      "type": "string",
+      "required": true,
+      "default": "text/plain"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

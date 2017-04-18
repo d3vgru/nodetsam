@@ -1,0 +1,32 @@
+{
+  "name": "Post",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint"
+    },
+    "starCount": {
+      "type": "number",
+      "default": 0
+    },
+    "repostCount": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

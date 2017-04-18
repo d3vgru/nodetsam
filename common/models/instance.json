@@ -65,6 +65,12 @@
       "type": "hasMany",
       "model": "Instance",
       "foreignKey": ""
+    },
+    "posts": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": "",
+      "through": "Actor"
     }
   },
   "acls": [],

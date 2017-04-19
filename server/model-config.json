@@ -47,7 +47,7 @@
     "dataSource": "db",
     "public": true
   },
-  "File": {
+  "Media": {
     "dataSource": "db",
     "public": true
   }

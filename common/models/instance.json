@@ -22,6 +22,11 @@
     },
     "feedAddress": {
       "type": "string"
+    },
+    "federationType": {
+      "type": "string",
+      "required": true,
+      "default": "ostatus"
     }
   },
   "validations": [],

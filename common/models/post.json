@@ -23,6 +23,11 @@
     "repostCount": {
       "type": "number",
       "default": 0
+    },
+    "nativeFormat": {
+      "type": "string",
+      "required": true,
+      "default": "native"
     }
   },
   "validations": [],

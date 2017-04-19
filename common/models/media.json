@@ -1,5 +1,5 @@
 {
-  "name": "File",
+  "name": "Media",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {

@@ -27,6 +27,11 @@
       "type": "string",
       "required": true,
       "default": "ostatus"
+    },
+    "privacy": {
+      "type": "string",
+      "required": true,
+      "default": "public"
     }
   },
   "validations": [],

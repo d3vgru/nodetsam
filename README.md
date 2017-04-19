@@ -16,6 +16,7 @@ P2P functionality will be configurable. Even if turned on, it should not break s
     LoopBack
     Babel
     React
+    Redux
 
 ## Authentication
 * client posts have to be processed by instance (including replies, stars, boosts)

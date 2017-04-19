@@ -108,6 +108,15 @@ P2P functionality will be configurable. Even if turned on, it should not break s
 
 * nodejs (almost complete?) OStatus lib: https://github.com/eschnou/node-ostatus
 
+## Compatibility
+
+Client should be able to connect in native, OStatus-compliant, GNU social, and Mastodon
+modes
+
+Server should be able to provide API for clients from GNU social and Mastodon
+
+Storage should be able to use native, GNU social, or Mastodon schema
+
 ## P2P mode
 
 * need to identify what server functions can be offloaded

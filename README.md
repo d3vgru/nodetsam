@@ -110,12 +110,13 @@ P2P functionality will be configurable. Even if turned on, it should not break s
 
 ## Compatibility
 
-Client should be able to connect in native, OStatus-compliant, GNU social, and Mastodon
-modes
+Client should be able to connect in native (ActivityPub), OStatus-compliant, GNU social,
+and Mastodon modes
 
-Server should be able to provide API for clients from GNU social and Mastodon
+Server should be able to provide API for clients from GNU social, Mastodon, and does
+ActivityPub have a client?
 
-Storage should be able to use native, GNU social, or Mastodon schema
+Storage should be able to use native (ActivityPub), GNU social, or Mastodon schema
 
 ## P2P mode
 

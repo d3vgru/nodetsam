@@ -1,29 +1,45 @@
 {
-  "name": "Instance",
+  "name": "ActorConfig",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "address": {
+    "preferredUsername": {
       "type": "string",
       "required": true
     },
-    "feedAddress": {
+    "displayName": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint"
+    },
+    "privacy": {
+      "type": "string",
+      "required": true,
+      "default": "public"
+    },
+    "defaultLang": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "logoFile": {
+    "iconFile": {
       "type": "hasOne",
       "model": "File",
       "foreignKey": ""
     },
-    "actors": {
-      "type": "hasMany",
-      "model": "Actor",
+    "headerFile": {
+      "type": "hasOne",
+      "model": "File",
       "foreignKey": ""
     },
     "blockedActors": {
@@ -46,35 +62,9 @@
       "model": "Instance",
       "foreignKey": ""
     },
-    "subscribedActors": {
-      "type": "hasMany",
+    "actor": {
+      "type": "belongsTo",
       "model": "Actor",
-      "foreignKey": ""
-    },
-    "subscribedInstances": {
-      "type": "hasMany",
-      "model": "Instance",
-      "foreignKey": ""
-    },
-    "posts": {
-      "type": "hasMany",
-      "model": "Post",
-      "foreignKey": "",
-      "through": "Actor"
-    },
-    "optedInActors": {
-      "type": "hasMany",
-      "model": "Actor",
-      "foreignKey": ""
-    },
-    "optedInInstances": {
-      "type": "hasMany",
-      "model": "Instance",
-      "foreignKey": ""
-    },
-    "activeConfig": {
-      "type": "hasOne",
-      "model": "InstanceConfig",
       "foreignKey": ""
     }
   },

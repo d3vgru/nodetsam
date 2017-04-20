@@ -50,5 +50,13 @@
   "Media": {
     "dataSource": "db",
     "public": true
+  },
+  "InstanceConfig": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ActorConfig": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -1,0 +1,37 @@
+{
+  "name": "InstanceConfig",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "federationType": {
+      "type": "string",
+      "required": true,
+      "default": "ostatus"
+    },
+    "privacy": {
+      "type": "string",
+      "required": true,
+      "default": "public"
+    },
+    "defaultLang": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

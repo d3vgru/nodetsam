@@ -11,21 +11,6 @@
       "required": true,
       "default": "Person"
     },
-    "preferredUsername": {
-      "type": "string",
-      "required": true
-    },
-    "displayName": {
-      "type": "string",
-      "required": true
-    },
-    "summary": {
-      "type": "string",
-      "required": true
-    },
-    "location": {
-      "type": "geopoint"
-    },
     "address": {
       "type": "string",
       "required": true
@@ -43,28 +28,10 @@
       "type": "string",
       "required": true,
       "default": "salmon"
-    },
-    "privacy": {
-      "type": "string",
-      "required": true,
-      "default": "public"
-    },
-    "defaultLang": {
-      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "iconFile": {
-      "type": "hasOne",
-      "model": "File",
-      "foreignKey": ""
-    },
-    "headerFile": {
-      "type": "hasOne",
-      "model": "File",
-      "foreignKey": ""
-    },
     "instance": {
       "type": "belongsTo",
       "model": "Instance",
@@ -90,24 +57,9 @@
       "model": "Actor",
       "foreignKey": ""
     },
-    "blockedActors": {
-      "type": "hasMany",
-      "model": "Actor",
-      "foreignKey": ""
-    },
-    "mutedActors": {
-      "type": "hasMany",
-      "model": "Actor",
-      "foreignKey": ""
-    },
-    "blockedInstances": {
-      "type": "hasMany",
-      "model": "Instance",
-      "foreignKey": ""
-    },
-    "mutedInstances": {
-      "type": "hasMany",
-      "model": "Instance",
+    "activeConfig": {
+      "type": "hasOne",
+      "model": "ActorConfig",
       "foreignKey": ""
     }
   },

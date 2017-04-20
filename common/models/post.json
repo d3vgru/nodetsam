@@ -39,6 +39,12 @@
     },
     "hash": {
       "type": "string"
+    },
+    "parentHash": {
+      "type": "string"
+    },
+    "rootHash": {
+      "type": "string"
     }
   },
   "validations": [],

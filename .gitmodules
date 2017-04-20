@@ -1,0 +1,6 @@
+[submodule "vendor/lib/bittorrent-dht"]
+	path = vendor/lib/bittorrent-dht
+	url = git@github.com:d3vgru/bittorrent-dht.git
+[submodule "vendor/lib/node-ostatus"]
+	path = vendor/lib/node-ostatus
+	url = git@github.com:d3vgru/node-ostatus.git

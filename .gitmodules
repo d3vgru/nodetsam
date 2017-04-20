@@ -1,6 +1,0 @@
-[submodule "bittorrent-dht"]
-	path = bittorrent-dht
-	url = https://github.com/d3vgru/bittorrent-dht
-[submodule "node-ostatus"]
-	path = node-ostatus
-	url = https://github.com/d3vgru/node-ostatus

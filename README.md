@@ -1,6 +1,10 @@
 # nodetsam
 A pure JavaScript OStatus client/server framework.
 
+Make the server as permissive as the admins would like.
+
+Make the client as restrictive as the people would like.
+
 The idea is to have a very lightweight server and a pretty thick client.
 Both should be compatible with Mastodon and GNU social.
 

@@ -48,6 +48,9 @@
       "type": "string",
       "required": true,
       "default": "public"
+    },
+    "defaultLang": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -72,7 +75,7 @@
       "model": "Post",
       "foreignKey": ""
     },
-    "starredPosts": {
+    "likedPosts": {
       "type": "hasMany",
       "model": "Post",
       "foreignKey": ""

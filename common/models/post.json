@@ -16,7 +16,7 @@
     "location": {
       "type": "geopoint"
     },
-    "starCount": {
+    "likeCount": {
       "type": "number",
       "default": 0
     },
@@ -33,6 +33,12 @@
       "type": "string",
       "required": true,
       "default": "public"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
     }
   },
   "validations": [],

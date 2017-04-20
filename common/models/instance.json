@@ -32,6 +32,9 @@
       "type": "string",
       "required": true,
       "default": "public"
+    },
+    "defaultLang": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -81,6 +84,16 @@
       "model": "Post",
       "foreignKey": "",
       "through": "Actor"
+    },
+    "optedInActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "foreignKey": ""
+    },
+    "optedInInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "foreignKey": ""
     }
   },
   "acls": [],

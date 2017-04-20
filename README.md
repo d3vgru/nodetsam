@@ -15,13 +15,6 @@ It should be (slightly less easy) to replace the back-end of a compatible instan
 The server will have a standard reference implementation based on LoopBack.
 P2P functionality will be configurable. Even if turned on, it should not break standards-compliant clients.
 
-    Webpack
-    Immutable
-    LoopBack
-    Babel
-    React
-    Redux
-
 ## Authentication
 * client posts have to be processed by instance (including replies, stars, boosts)
 
@@ -60,7 +53,7 @@ P2P functionality will be configurable. Even if turned on, it should not break s
 
   -local storage
 
-  -JS view framework (React + ??? + Webpack)
+  -JS view framework (Vue + Vuex + Webpack)
    https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577fcvxzjvbuj
 
   -async/promises

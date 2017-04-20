@@ -28,7 +28,8 @@
     "helmet#noSniff": {},
     "helmet#noCache": {
       "enabled": false
-    }
+    },
+    "loopback-i18n#i18n": {}
   },
   "session": {},
   "auth": {},

@@ -17,6 +17,9 @@ The server will have a standard reference implementation based on LoopBack.
 P2P functionality will be configurable. Even if turned on, it should not break
 "standards-compliant" clients.
 
+Functionality should be modular enough that client and instance both have a top-level
+class that can be overridden, replacing its hierarchy of internal components as needed.
+
 Clients should be themable (whatever that means).
 
 Federation should be implemented by converters that map the native data structure to what

@@ -1,5 +1,5 @@
 # nodetsam
-A pure JavaScript OStatus client/server framework.
+A pure JavaScript OStatus client/instance framework.
 
 ## Requirements
 
@@ -8,11 +8,11 @@ requires babel-cli. It might not be a bad idea to have loopback-cli and vue-cli 
 
 ## Overview (TODO: refactor)
 
-Make the server as permissive as the admins would like.
+Make the instance as permissive as the admins would like.
 
 Make the client as restrictive as the people would like.
 
-The idea is to have a very lightweight server and a pretty thick client.
+The idea is to have a very lightweight instance and a pretty thick client.
 Both should be compatible with Mastodon and GNU social.
 
 It should be (relatively) easy to point the client to a compatible instance.
@@ -20,7 +20,7 @@ The client will have a standard React reference implementation without P2P funct
 
 It should be (slightly less easy) to replace the back-end of a compatible instance while
 leaving their front-end intact.
-The server will have a standard reference implementation based on LoopBack.
+The instance will have a standard reference implementation based on LoopBack.
 P2P functionality will be configurable. Even if turned on, it should not break
 "standards-compliant" clients.
 
@@ -49,7 +49,7 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 ## High-level (back-end / instance)
 * strict implementation of OStatus standards
 * should be very light weight (LoopBack API)
-* define requirements of server to support standard client
+* define requirements of instance to support standard client
 * instance would maintain DHT node list to seed newly started clients
 * every hour, snapshot of public feed published along with hash(es)
 
@@ -105,9 +105,9 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 
 * at least two major flavors
 
-  -reference: thin client, server does heavy lifting
+  -reference: thin client, instance does heavy lifting
 
-  -meshtodon: offload as much server work as possible in p2pmode
+  -meshtodon: offload as much instance work as possible in p2pmode
 
 * how much integration is possible with things like network type, battery level?
 
@@ -128,16 +128,16 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 Client should be able to connect in native (ActivityPub), OStatus-compliant, GNU social,
 and Mastodon modes
 
-Server should be able to provide API for clients from GNU social, Mastodon, and does
-ActivityPub have a client?
+Instance should be able to provide API for clients from GNU social, Mastodon, and
+postActiv
 
 Storage should be able to use native (ActivityPub), GNU social, or Mastodon schema
 
 ## P2P mode
 
-* need to identify what server functions can be offloaded
+* need to identify what instance functions can be offloaded
 
-  -define minimum requirements of a server that only supports p2p clients
+  -define minimum requirements of an instance that only supports p2p clients
 
 * instances add alternate endpoints for...
 
@@ -193,7 +193,7 @@ Storage should be able to use native (ActivityPub), GNU social, or Mastodon sche
   -should be able to enable/disable DMs dynamically
 
 ## Block lists
-* currently server maintains block/mute list
+* currently instance maintains block/mute list
 
   -sync with client
 

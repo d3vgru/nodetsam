@@ -11,9 +11,16 @@ Both should be compatible with Mastodon and GNU social.
 It should be (relatively) easy to point the client to a compatible instance.
 The client will have a standard React reference implementation without P2P functionality.
 
-It should be (slightly less easy) to replace the back-end of a compatible instance while leaving their front-end intact.
+It should be (slightly less easy) to replace the back-end of a compatible instance while
+leaving their front-end intact.
 The server will have a standard reference implementation based on LoopBack.
-P2P functionality will be configurable. Even if turned on, it should not break standards-compliant clients.
+P2P functionality will be configurable. Even if turned on, it should not break
+"standards-compliant" clients.
+
+Clients should be themable (whatever that means).
+
+Federation should be implemented by converters that map the native data structure to what
+a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 
 ## Authentication
 * client posts have to be processed by instance (including replies, stars, boosts)
@@ -66,7 +73,7 @@ P2P functionality will be configurable. Even if turned on, it should not break s
 
   -if OStatus services are listed under .well-known, client should be able to roll with it
 
-  -possible HumHub, Friendica, and/or Diaspora* support at some point (wtf is a buddycloud)
+  -possible HumHub, Friendica, and/or Diaspora* support at some point
 
   -can we separate OStatus interface from "social network" abstraction?
 
@@ -209,5 +216,6 @@ Storage should be able to use native (ActivityPub), GNU social, or Mastodon sche
 ### refresh federated feed
 * same, but also pull in metadata for other instances user is following someone on
 
-### make post // un/boost post // un/star post // un/follow user // un/mute user // un/block user
+### make post // un/boost post // un/star post // un/follow user // un/mute user //
+un/block user
 * these are standard instance functions

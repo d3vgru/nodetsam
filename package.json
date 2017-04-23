@@ -16,7 +16,6 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
     "concurrently": "^3.4.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",

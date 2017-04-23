@@ -5798,6 +5798,10 @@ void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
+vue-devtools@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/vue-devtools/-/vue-devtools-3.1.2.tgz#849c9b8d955f3d7b73c98a0381228808b2a170bb"
+
 vue-hot-reload-api@^2.0.11:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"

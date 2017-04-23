@@ -1,6 +1,13 @@
 # nodetsam
 A pure JavaScript OStatus client/server framework.
 
+## Requirements
+
+The client and instance code both use yarn to manage modules. Running a dev instance
+requires babel-cli. It might not be a bad idea to have loopback-cli and vue-cli installed.
+
+## Overview (TODO: refactor)
+
 Make the server as permissive as the admins would like.
 
 Make the client as restrictive as the people would like.

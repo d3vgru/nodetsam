@@ -13,6 +13,7 @@ import Vuex from 'vuex'
 import vuexI18n from 'vuex-i18n'
 import Quasar from 'quasar'
 import router from './router'
+import { sync } from 'vuex-router-sync'
 
 // TODO load all locales dynamically
 import translationsEn from '../../../common/i18n/en.json'
@@ -25,6 +26,8 @@ const store = new Vuex.Store({
   mutations: {
   }
 })
+
+sync(store, router) // Install vuex-router-sync
 
 Vue.use(vuexI18n.plugin, store) // Install Vuex I18n plugin
 // TODO override replace function to use {{}} like mashpie/i18n-node

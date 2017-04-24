@@ -25,6 +25,8 @@ const store = new Vuex.Store({
 })
 
 Vue.use(vuexI18n.plugin, store) // Install Vuex I18n plugin
+// TODO override replace function to use {{}} like mashpie/i18n-node
+// TODO set up aliases so client and instance use same method name __
 // TODO register all loaded locales automatically
 Vue.i18n.add('en', translationsEn)
 Vue.i18n.fallback('en')

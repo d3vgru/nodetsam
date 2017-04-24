@@ -3,16 +3,12 @@ A pure JavaScript federated networking client/instance framework.
 
 ## Requirements
 
-The client and instance code both use yarn to manage modules. Running a dev instance
-requires `babel-cli`:
+The client and instance code both use [yarn](https://yarnpkg.com/docs/install/) to manage
+modules. Running a dev instance requires `babel-cli` and `quasar-cli`
 
-    npm install -g babel-cli
+    npm install -g babel-cli quasar-cli
 
-It might not be a bad idea to have `quasar-cli` and `vue-cli` installed for client dev:
-
-    npm install -g quasar-cli vue-cli
-
-For both client and instance dev, `loopback-cli` may be helpful
+For both client and instance dev `loopback-cli` may be helpful
 
     npm install -g loopback-cli
 

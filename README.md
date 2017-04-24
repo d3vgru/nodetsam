@@ -5,26 +5,33 @@ A pure JavaScript federated networking client/instance framework.
 
 The client and instance code both use yarn to manage modules. Running a dev instance
 requires babel-cli:
+
     npm install -g babel-cli
 
 It might not be a bad idea to have quasar-cli and vue-cli installed for client dev:
+
     npm install -g quasar-cli vue-cli
 
 For both client and instance dev, loopback-cli may be helpful:
+
     npm install -g loopback-cli
 
 To start a dev server and launch a dev client in a window:
+
     npm run dev
 
 ## Running
 
 First go into `client/reference` and run:
+
     yarn install
 
 To build the client in `dist` just:
+
     npm run build
 
 If you build the client, you can go back to the root and:
+
     npm start
     
 Point your browser at `http://localhost:3001` which is served by the LoopBack instance.
@@ -32,6 +39,7 @@ This is useful if you don't plan to do any work on the client side. Note if you 
 anything in the `common` folder, you will need to rebuild the client.
 
 If you did not build the client, you can instead:
+
     npm run dev
 
 This will open the client in a browser after starting the server.

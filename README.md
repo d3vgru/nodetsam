@@ -1,10 +1,24 @@
 # nodetsam
-A pure JavaScript OStatus client/instance framework.
+A pure JavaScript federated networking client/instance framework.
 
 ## Requirements
 
 The client and instance code both use yarn to manage modules. Running a dev instance
-requires babel-cli. It might not be a bad idea to have loopback-cli and vue-cli installed.
+requires babel-cli:
+
+    npm install -g babel-cli
+
+It might not be a bad idea to have quasar-cli and vue-cli installed for client dev:
+
+    npm install -g quasar-cli vue-cli
+
+For both client and instance dev, loopback-cli may be helpful:
+
+    npm install -g loopback-cli
+
+To start a dev server and launch a dev client in a window:
+
+    npm run dev
 
 ## Overview (TODO: refactor)
 

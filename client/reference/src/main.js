@@ -1,29 +1,33 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// === DEFAULT / CUSTOM STYLE ===
+// WARNING! always comment out ONE of the two require() calls below.
+// 1. use next line to activate CUSTOM STYLE (./src/themes)
+// require(`./themes/app.${__THEME}.styl`)
+// 2. or, use next line to activate DEFAULT QUASAR STYLE
+require(`quasar/dist/quasar.${__THEME}.css`)
+// ==============================
+
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './App'
+import Quasar from 'quasar'
 import router from './router'
 
-Vue.config.productionTip = false
-
-Vue.use(Vuex)
+Vue.use(Vuex) // Install Vuex state container
 
 const store = new Vuex.Store({
   state: {
-    count: 0
   },
   mutations: {
-    increment: state => state.count++,
-    decrement: state => state.count--
   }
 })
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
+Vue.use(Quasar) // Install Quasar Framework
+
+Quasar.start(() => {
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#q-app',
+    router,
+    store,
+    render: h => h(require('./App'))
+  })
 })

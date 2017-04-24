@@ -14,7 +14,11 @@ For both client and instance dev `loopback-cli` may be helpful
 
 ## Running
 
-First go into `client/reference` and run
+First, from the project root run
+
+    yarn install
+
+Then go into `client/reference` and
 
     yarn install
 
@@ -22,7 +26,7 @@ To run the client without the server then
 
     quasar dev    
 
-To start a dev server and launch a dev client in a window, from the project root run
+To start a dev server and launch a dev client in a window go to the project root and
 
     npm run dev
 

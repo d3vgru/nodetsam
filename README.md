@@ -12,37 +12,38 @@ It might not be a bad idea to have `quasar-cli` and `vue-cli` installed for clie
 
     npm install -g quasar-cli vue-cli
 
-For both client and instance dev, `loopback-cli` may be helpful:
+For both client and instance dev, `loopback-cli` may be helpful
 
     npm install -g loopback-cli
 
-To start a dev server and launch a dev client in a window:
-
-    npm run dev
-
 ## Running
 
-First go into `client/reference` and run:
+First go into `client/reference` and run
 
     yarn install
 
-To build the client in `client/reference/dist` just:
+To run the client without the server then
 
-    npm run build
+    quasar dev    
 
-If you build the client, you can go back to the root and:
+To start a dev server and launch a dev client in a window, from the project root run
+
+    npm run dev
+
+## Building
+
+To build the client in `client/reference/dist` just go to `client/reference` and
+
+    quasar build
+
+If you build the client, you can go back to the project root and
 
     npm start
     
 Point your browser at `http://localhost:3001` which is served by the LoopBack instance.
-This is useful if you don't plan to do any work on the client side. Note if you update
-anything in the `common` folder, you will need to rebuild the client.
-
-If you did not build the client, you can instead:
-
-    npm run dev
-
-This will open the client in a browser after starting the server.
+This is useful if you don't plan to do any work on the client side. Note: if you update
+anything in the `common` folder, such as the data model, you will need to rebuild the
+client.
 
 ## Overview (TODO: refactor)
 

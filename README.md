@@ -76,11 +76,11 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 ## High-level (global)
 * front and back end should be totally independent
 
-  -instances will conform to standards, adding additional info safely
+  - instances will conform to standards, adding additional info safely
   
-  -client should be able to connect to any instance that conforms to standards
+  - client should be able to connect to any instance that conforms to standards
   
-  -standards in question are: OStatus, ActivityPub
+  - standards in question are: OStatus, ActivityPub
 
 * Babel for ES2016+ support
 
@@ -91,39 +91,39 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 * instance would maintain DHT node list to seed newly started clients
 * every hour, snapshot of public feed published along with hash(es)
 
-  -hash and metadata can be used by clients to sync feeds with each other
+  - hash and metadata can be used by clients to sync feeds with each other
 
-  -signing can be used to store mutable data (<1k) if needed
+  - signing can be used to store mutable data (<1k) if needed
 
-  -federated feeds would be maintained same way
+  - federated feeds would be maintained same way
 
-  -need way to tell other instances if a particular item is intentionally not synced
+  - need way to tell other instances if a particular item is intentionally not synced
 
 * private posts handled directly with instance
 
-  -p2p mode enables more secure DMs
+  - p2p mode enables more secure DMs
 
 ## High-level (front-end / client)
 * HTML5 app
 
-  -local storage
+  - local storage
 
-  -JS view framework (Vue + Vuex + Webpack)
+  - responsive JS view framework (Vue + Vuex + Quasar + Webpack)
    https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577fcvxzjvbuj
 
-  -async/promises
+  - async/promises
 
 * compatible with "OStatus" (bridges to protocols) (bridges to transport? e.g. XMPP)
 
-  -specifically Mastodon and GS (bridges to networks)
+  - specifically Mastodon and GS (bridges to networks)
 
-  -main differences are probably content of payload, not so much transport & metadata
+  - main differences are probably content of payload, not so much transport & metadata
 
-  -if OStatus services are listed under .well-known, client should be able to roll with it
+  - if OStatus services are listed under .well-known, client should be able to roll with it
 
-  -possible HumHub, Friendica, and/or Diaspora* support at some point
+  - possible HumHub, Friendica, and/or Diaspora* support at some point
 
-  -can we separate OStatus interface from "social network" abstraction?
+  - can we separate OStatus interface from "social network" abstraction?
 
 * reference implementation of a sort of spec for FOSS social network front ends
 
@@ -135,21 +135,21 @@ a particular target (GNU social, Mastodon, postActiv, etc) is expecting.
 
 * can we abstract out the JS so if we start with say React we can change later
 
-  -get something minminal that works
+  - get something minminal that works
 
-  -while it is still minimal, build abstraction layers to ease swapping out libs later
+  - while it is still minimal, build abstraction layers to ease swapping out libs later
 
 ## Front-end variants
 
 * at least two major flavors
 
-  -reference: thin client, instance does heavy lifting
+  - reference: thin client, instance does heavy lifting
 
-  -meshtodon: offload as much instance work as possible in p2pmode
+  - meshtodon: offload as much instance work as possible in p2pmode
 
 * how much integration is possible with things like network type, battery level?
 
-  -should degrade gracefully away from p2p mode if on battery, mobile device, etc
+  - should degrade gracefully away from p2p mode if on battery, mobile device, etc
 
 * should have way to force one mode or the other
 
@@ -175,27 +175,27 @@ Storage should be able to use native (ActivityPub), GNU social, or Mastodon sche
 
 * need to identify what instance functions can be offloaded
 
-  -define minimum requirements of an instance that only supports p2p clients
+  - define minimum requirements of an instance that only supports p2p clients
 
 * instances add alternate endpoints for...
 
-  -link[rel="hub"]: browser can act as hub?
+  - link[rel="hub"]: browser can act as hub?
 
-  -link[rel="salmon"]: browser can act as endpoint?
+  - link[rel="salmon"]: browser can act as endpoint?
 
 * if instance acts as proxy, is that helpful or just more overhead?
 
-  -in other words, what actual work would the client be doing?
+  - in other words, what actual work would the client be doing?
 
 * how would OStatus need to be extended to make p2p mode (actually? even more?) useful?
 
-  -need to include hashes in Atom feeds
+  - need to include hashes in Atom feeds
 
-  -clients can fetch feed chunks and individual posts and then share on DHT
+  - clients can fetch feed chunks and individual posts and then share on DHT
 
-  -need to be able to sync client to its instance, both directions (pull already impl)
+  - need to be able to sync client to its instance, both directions (pull already impl)
 
-  -clients should be able to handle salmon between similar clients on same DHT
+  - clients should be able to handle salmon between similar clients on same DHT
 
 * admins should be able to set up "satellite" p2p support nodes with minimum functionality
 
@@ -205,46 +205,46 @@ Storage should be able to use native (ActivityPub), GNU social, or Mastodon sche
 
 * client will have different but well-known urls to pull _just_ hash and other metadata
 
-  -e.g. https://anti.energy/@user/hash.atom
+  - e.g. https://anti.energy/@user/hash.atom
 
 * DHT formed by clients connected to a given instance
 
-  -how about between instances?
+  - how about between instances?
 
 * nodejs DHT lib: https://github.com/feross/bittorrent-dht
 
-  -probably need to extend it to prioritize certain peers one way or the other
+  - probably need to extend it to prioritize certain peers one way or the other
 
 * how do we handle streaming?
 
-  -would it help for an instance to publish update announce at signed hash?
+  - would it help for an instance to publish update announce at signed hash?
 
-  -can clients help stream to each other?
+  - can clients help stream to each other?
 
 ## Direct messaging
 * enables e2e encryption, allowing more secure "DMs" than currently available
 
-  -DMs should not degrade, so user should be able to disable to save battery/bandwidth
+  - DMs should not degrade, so user should be able to disable to save battery/bandwidth
 
-  -DMs on/off should be a setting for "standard" mode
+  - DMs on/off should be a setting for "standard" mode
 
-  -should be able to enable/disable DMs dynamically
+  - should be able to enable/disable DMs dynamically
 
 ## Block lists
 * currently instance maintains block/mute list
 
-  -sync with client
+  - sync with client
 
-  -process on client side for posts pulled in from DHT
+  - process on client side for posts pulled in from DHT
 
 ## Groups
 * ability to feel like member of a group is a big draw
 
-  -define group membership in human terms
+  - define group membership in human terms
 
-  -define group membership programmatically
+  - define group membership programmatically
 
-  -fight to ensure groups have functions needed to achieve and maintain freedom
+  - fight to ensure groups have functions needed to achieve and maintain freedom
 
 ## Client P2P Operations
 
@@ -264,6 +264,5 @@ Storage should be able to use native (ActivityPub), GNU social, or Mastodon sche
 ### refresh federated feed
 * same, but also pull in metadata for other instances user is following someone on
 
-### make post // un/boost post // un/star post // un/follow user // un/mute user //
-un/block user
+### (make / un/boost / un/star) post // (un/follow / un/mute / un/block) user
 * these are standard instance functions

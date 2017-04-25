@@ -12,6 +12,7 @@
       if using subRoutes
     -->
     <div class="layout-view">
+      <Counter />
       <div class="logo-container non-selectable no-pointer-events">
         <div class="logo" :style="position">
           <img src="~assets/quasar-logo.png">
@@ -31,6 +32,8 @@ var rotateForce = 40
 
 import { Utils } from 'quasar'
 
+import Counter from '../../../reference/src/components/Counter'
+
 export default {
   data () {
     return {
@@ -40,6 +43,7 @@ export default {
       rotateX: 0
     }
   },
+  components: { Counter },
   computed: {
     position () {
       let transform = `rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg)`

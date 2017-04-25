@@ -2,6 +2,12 @@
 var path = require('path')
 
 module.exports = {
+  // Webpack aliases
+  aliases: {
+    'vue$': 'vue/dist/vue.esm.js',
+    '@': path.resolve(__dirname, '../src'),
+    components: path.resolve(__dirname, '../src/components')
+  },
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),

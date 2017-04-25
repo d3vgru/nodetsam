@@ -1,15 +1,17 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+var load = component => () => System.import(`components/${component}.vue`)
+export { load }
+
+export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Index',
+      component: load('Index')
     }
   ]
 })

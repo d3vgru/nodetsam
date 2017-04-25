@@ -12,6 +12,10 @@ For both reference client and instance dev `loopback-cli` may be helpful
 
     npm install -g loopback-cli
 
+If you're working with the quasar client, you'll need `quasar-cli`
+
+    npm install -g quasar-cli
+
 ## Running
 
 First, from the project root

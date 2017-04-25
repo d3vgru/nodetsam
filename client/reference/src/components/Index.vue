@@ -1,93 +1,73 @@
 <template>
-  <q-layout>
-    <div slot="header" class="toolbar">
-      <q-toolbar-title :padding="0">
-        Quasar Framework v{{$q.version}}
-      </q-toolbar-title>
-    </div>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
 
-    <!--
-      Replace following "div" with
-      "<router-view class="layout-view">" component
-      if using subRoutes
-    -->
-    <div class="layout-view">
-      <div class="logo-container non-selectable no-pointer-events">
-        <div class="logo" :style="position">
-          <img src="~assets/quasar-logo.png">
-          <p class="caption text-center">
-            <span class="desktop-only">Move your mouse.</span>
-            <span class="touch-only">Touch screen and move.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </q-layout>
+    <p>{{ count }}</p>
+    <p>
+      <button @click="increment">+</button>
+      <button @click="decrement">-</button>
+    </p>
+
+    <h2>Essential Links</h2>
+    <ul>
+      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
+      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
+      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <br>
+      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
+    </ul>
+    <h2>Ecosystem</h2>
+    <ul>
+      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
+      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+    </ul>
+  </div>
 </template>
 
 <script>
-var moveForce = 30
-var rotateForce = 40
-
-import { Utils } from 'quasar'
-
 export default {
+  name: 'hello',
   data () {
     return {
-      moveX: 0,
-      moveY: 0,
-      rotateY: 0,
-      rotateX: 0
+      msg: 'Welcome to Your Vue.js App'
     }
   },
   computed: {
-    position () {
-      let transform = `rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg)`
-      return {
-        top: this.moveY + 'px',
-        left: this.moveX + 'px',
-        '-webkit-transform': transform,
-        '-ms-transform': transform,
-        transform
-      }
+    count () {
+      return this.$store.state.count
     }
   },
   methods: {
-    move (event) {
-      const {width, height} = Utils.dom.viewport()
-      const {top, left} = Utils.event.position(event)
-      const halfH = height / 2
-      const halfW = width / 2
-
-      this.moveX = (left - halfW) / halfW * -moveForce
-      this.moveY = (top - halfH) / halfH * -moveForce
-      this.rotateY = (left / width * rotateForce * 2) - rotateForce
-      this.rotateX = -((top / height * rotateForce * 2) - rotateForce)
+    increment () {
+      this.$store.commit('increment')
+    },
+    decrement () {
+      this.$store.commit('decrement')
     }
-  },
-  mounted () {
-    this.$nextTick(() => {
-      document.addEventListener('mousemove', this.move)
-      document.addEventListener('touchmove', this.move)
-    })
-  },
-  beforeDestroy () {
-    document.removeEventListener('mousemove', this.move)
-    document.removeEventListener('touchmove', this.move)
   }
 }
 </script>
 
-<style lang="styl">
-.logo-container
-  width 192px
-  height 268px
-  perspective 800px
-  position absolute
-  top 50%
-  left 50%
-  transform translateX(-50%) translateY(-50%)
-.logo
-  position absolute
-  transform-style preserve-3d
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
 </style>

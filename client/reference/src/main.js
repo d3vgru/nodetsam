@@ -1,49 +1,29 @@
-require('es6-promise').polyfill()
-
-// === DEFAULT / CUSTOM STYLE ===
-// WARNING! always comment out ONE of the two require() calls below.
-// 1. use next line to activate CUSTOM STYLE (./src/themes)
-// require(`./themes/app.${__THEME}.styl`)
-// 2. or, use next line to activate DEFAULT QUASAR STYLE
-require(`quasar/dist/quasar.${__THEME}.css`)
-// ==============================
-
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuex from 'vuex'
-import vuexI18n from 'vuex-i18n'
-import Quasar from 'quasar'
+import App from './App'
 import router from './router'
-import { sync } from 'vuex-router-sync'
 
-// TODO load all locales dynamically
-import translationsEn from '../../../common/i18n/en.json'
+Vue.config.productionTip = false
 
-Vue.use(Vuex) // Install Vuex state container
+Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
+    count: 0
   },
   mutations: {
+    increment: state => state.count++,
+    decrement: state => state.count--
   }
 })
 
-sync(store, router) // Install vuex-router-sync
-
-Vue.use(vuexI18n.plugin, store) // Install Vuex I18n plugin
-// TODO override replace function to use {{}} like mashpie/i18n-node
-// TODO set up aliases so client and instance use same method name __
-// TODO register all loaded locales automatically
-Vue.i18n.add('en', translationsEn)
-Vue.i18n.fallback('en')
-
-Vue.use(Quasar) // install quasar framework
-
-Quasar.start(() => {
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#q-app',
-    router,
-    store,
-    render: h => h(require('./App'))
-  })
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  template: '<App/>',
+  components: { App }
 })

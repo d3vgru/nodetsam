@@ -4,15 +4,13 @@ A pure JavaScript federated networking client/instance framework.
 ## Requirements
 
 The client and instance code both use [yarn](https://yarnpkg.com/docs/install/) to manage
-modules. Running a dev instance of the reference client requires `babel-cli`
-
-    npm install -g babel-cli
-
-For both reference client and instance dev `loopback-cli` may be helpful
+modules. For both reference client and instance dev
+[loopback-cli](https://loopback.io/doc/en/lb3/Command-line-tools.html) may be helpful
 
     npm install -g loopback-cli
 
-If you're working with the quasar client, you'll need `quasar-cli`
+If you're working with the quasar client, you'll need
+[quasar-cli](http://quasar-framework.org/guide/quasar-cli.html)
 
     npm install -g quasar-cli
 

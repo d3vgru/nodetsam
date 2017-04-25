@@ -16,6 +16,7 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "concurrently": "^3.4.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
@@ -27,6 +28,8 @@
     "server": "babel-node server/server.js",
     "client": "babel-node start-client.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "quasar": "babel-node start-quasar.js",
+    "quasar-dev": "concurrently \"npm run server\" \"npm run quasar\"",
     "lint": "eslint ."
   },
   "repository": {

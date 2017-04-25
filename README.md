@@ -4,37 +4,45 @@ A pure JavaScript federated networking client/instance framework.
 ## Requirements
 
 The client and instance code both use [yarn](https://yarnpkg.com/docs/install/) to manage
-modules. Running a dev instance requires `babel-cli` and `quasar-cli`
+modules. Running a dev instance of the reference client requires `babel-cli`
 
-    npm install -g babel-cli quasar-cli
+    npm install -g babel-cli
 
-For both client and instance dev `loopback-cli` may be helpful
+For both reference client and instance dev `loopback-cli` may be helpful
 
     npm install -g loopback-cli
 
 ## Running
 
-First, from the project root run
+First, from the project root
 
     yarn install
 
-Then go into `client/reference` and
+Then go into `client/reference`
 
     yarn install
 
-To run the client without the server then
-
-    quasar dev    
-
-To start a dev server and launch a dev client in a window go to the project root and
+To run the client without the server
 
     npm run dev
+
+To start a dev server and launch a dev reference client in a window go to the project root
+
+    npm run dev
+
+To start the quasar client, first go to `client\quasar`
+
+    yarn install
+
+then
+
+    quasar dev
 
 ## Building
 
 To build the client in `client/reference/dist` just go to `client/reference` and
 
-    quasar build
+    npm run build
 
 If you build the client, you can go back to the project root and
 
@@ -44,6 +52,19 @@ Point your browser at `http://localhost:3001` which is served by the LoopBack in
 This is useful if you don't plan to do any work on the client side. Note: if you update
 anything in the `common` folder, such as the data model, you will need to rebuild the
 client.
+
+To build the quasar client in `client/quasar/build\` go to `client/quasar` and
+
+    quasar build
+
+To default to the built quasar client when loading `http://localhost:3001` edit the files
+section of `server/middleware.json` so it looks like
+
+    "files": {
+      "loopback#static": {
+        "params": "$!../client/quasar/dist"
+      }
+    },
 
 ## Overview (TODO: refactor)
 

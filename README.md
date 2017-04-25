@@ -42,11 +42,11 @@ then
 
 ## Building
 
-To build the client in `client/reference/dist` just go to `client/reference` and
+To build the client in `client/reference/dist` just go to `client/reference`
 
     npm run build
 
-If you build the client, you can go back to the project root and
+If you build the client, you can go back to the project root
 
     npm start
     
@@ -55,7 +55,7 @@ This is useful if you don't plan to do any work on the client side. Note: if you
 anything in the `common` folder, such as the data model, you will need to rebuild the
 client.
 
-To build the quasar client in `client/quasar/build` go to `client/quasar` and
+To build the quasar client in `client/quasar/build` go to `client/quasar`
 
     quasar build
 

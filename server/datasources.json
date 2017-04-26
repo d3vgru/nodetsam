@@ -3,19 +3,19 @@
     "name": "db",
     "connector": "memory"
   },
-  "nodetsam-mysql": {
+  "mysql": {
     "host": "localhost",
     "port": 3306,
     "url": "${MYSQL_URL}",
     "database": "nodetsam",
     "password": "test123",
-    "name": "nodetsam-mysql",
+    "name": "mysql",
     "user": "nodetsam",
     "connector": "mysql"
   },
   "storage": {
     "name": "storage",
-    "connector": "loopback-connector-storage",
+    "connector": "loopback-component-storage",
     "nameConflict": "makeUnique",
     "provider": "filesystem",
     "root": "./media"

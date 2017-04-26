@@ -27,6 +27,7 @@
     "nsp": "^2.1.0"
   },
   "scripts": {
+    "migrate": "babel-node server/migrate.js",
     "start": "babel-node server/server.js",
     "server": "babel-node server/server.js",
     "client": "babel-node start-client.js",

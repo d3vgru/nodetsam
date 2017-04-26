@@ -14,52 +14,56 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "options": {
       "emailVerificationRequired": true
     }
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": false
   },
   "Actor": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": true
   },
   "Instance": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": true
   },
   "Post": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": true
   },
   "Media": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": true
   },
   "InstanceConfig": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
     "public": true
   },
   "ActorConfig": {
-    "dataSource": "db",
+    "dataSource": "nodetsam-mysql",
+    "public": true
+  },
+  "Attachment": {
+    "dataSource": "storage",
     "public": true
   }
 }

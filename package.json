@@ -12,6 +12,8 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^4.0.0",
     "loopback-component-oauth2": "^3.0.0",
+    "loopback-component-storage": "^3.2.0",
+    "loopback-connector-mysql": "^2.2",
     "loopback-i18n": "^1.1.4",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"

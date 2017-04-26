@@ -20,6 +20,9 @@
       "type": "string",
       "required": true
     },
+    "localPath": {
+      "type": "string"
+    },
     "size": {
       "type": "number",
       "required": true,

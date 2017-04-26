@@ -2,5 +2,22 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "nodetsam-mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "${MYSQL_URL}",
+    "database": "nodetsam",
+    "password": "test123",
+    "name": "nodetsam-mysql",
+    "user": "nodetsam",
+    "connector": "mysql"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-connector-storage",
+    "nameConflict": "makeUnique",
+    "provider": "filesystem",
+    "root": "./media"
   }
 }

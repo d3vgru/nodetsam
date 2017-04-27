@@ -28,7 +28,8 @@ To start a dev server and launch a dev reference client in a browser
 
     npm run dev
 
-If you first build the client, you can go back to the project root
+If you first [build](client/reference#building) the client, you can go back to the project
+root
 
     npm start
 
@@ -46,7 +47,7 @@ section of `server/middleware.json` so it looks like
       }
     },
 
-Make sure you build the Quasar client first.
+Make sure you [build](client/quasar#building) the Quasar client first.
 
 ## Overview (TODO: refactor)
 

@@ -9,10 +9,10 @@ modules. For both reference client and instance dev
 
     npm install -g loopback-cli
 
-If you're working with the quasar client, you'll need
-[quasar-cli](http://quasar-framework.org/guide/quasar-cli.html)
+## Client Implementations
 
-    npm install -g quasar-cli
+Both a plain [Vue](client/reference) and [Quasar](client/quasar) implementation of a
+client are provided.
 
 ## Running
 
@@ -20,46 +20,24 @@ First, from the project root
 
     yarn install
 
-Then go into `client/reference`
+Make sure you went to `client/reference` and ran
 
     yarn install
 
-To run the client without the server
+To start a dev server and launch a dev reference client in a browser
 
     npm run dev
 
-To start a dev server and launch a dev reference client in a window go to the project root
-
-    npm run dev
-
-To start the quasar client, first go to `client\quasar`
-
-    yarn install
-
-then
-
-    quasar dev
-
-## Building
-
-To build the client in `client/reference/dist` just go to `client/reference`
-
-    npm run build
-
-If you build the client, you can go back to the project root
+If you first build the client, you can go back to the project root
 
     npm start
-    
+
 Point your browser at `http://localhost:3001` which is served by the LoopBack instance.
 This is useful if you don't plan to do any work on the client side. Note: if you update
-anything in the `common` folder, such as the data model, you will need to rebuild the
-client.
+anything in the `common` folder, such as the data model or translations, you will need to
+rebuild the client.
 
-To build the quasar client in `client/quasar/build` go to `client/quasar`
-
-    quasar build
-
-To default to the built quasar client when loading `http://localhost:3001` edit the files
+To default to the quasar client when loading `http://localhost:3001` edit the files
 section of `server/middleware.json` so it looks like
 
     "files": {
@@ -67,6 +45,8 @@ section of `server/middleware.json` so it looks like
         "params": "$!../client/quasar/dist"
       }
     },
+
+Make sure you build the Quasar client first.
 
 ## Overview (TODO: refactor)
 

@@ -18,6 +18,10 @@ app.start = function() {
   });
 };
 
+// Enable babel transpiler
+require('babel-core/register');
+require('./config.es6');
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {

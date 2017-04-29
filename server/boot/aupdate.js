@@ -1,11 +1,8 @@
 module.exports = function(app) {
-  var ds = app.dataSources.mysql;
+  let ds = app.dataSources.mysql
   if(ds.connected) {
-    ds.autoupdate();
+    ds.autoupdate()
   } else {
-    ds.once('connected', function() {
-      ds.autoupdate();
-    });
+    ds.once('connected', () => ds.autoupdate())
   }
-};
-;
+}

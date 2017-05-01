@@ -17,7 +17,7 @@
     "actorType": {
       "type": "string",
       "required": true,
-      "default": "Person"
+      "default": "https://www.w3.org/ns/activitystreams#Person"
     },
     "canonicalAddress": {
       "type": "string",

@@ -3,7 +3,7 @@ module.exports = function(app) {
     console.log("(skipping autoupdate)");
     return
   }
-  let ds = app.dataSources.mysql
+  let ds = app.dataSources.pgsql
   if (ds.connected) {
     ds.autoupdate(null, function(err) {
       if (err) throw err

@@ -14,52 +14,52 @@
     ]
   },
   "User": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "options": {
       "emailVerificationRequired": true
     }
   },
   "AccessToken": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": false
   },
   "ACL": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": false
   },
   "Actor": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Instance": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Post": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Media": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "InstanceConfig": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "ActorConfig": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Attachment": {
@@ -67,27 +67,27 @@
     "public": true
   },
   "Block": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Mute": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Subscriber": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Subscription": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "PostMedia": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   },
   "Like": {
-    "dataSource": "mysql",
+    "dataSource": "pgsql",
     "public": true
   }
 }

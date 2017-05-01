@@ -3,15 +3,14 @@
     "name": "db",
     "connector": "memory"
   },
-  "mysql": {
+  "pgsql": {
+    "name": "pgsql",
+    "connector": "postgresql",
     "host": "localhost",
-    "port": 3306,
-    "url": "${MYSQL_URL}",
+    "port": 5432,
     "database": "nodetsam",
-    "password": "test123",
-    "name": "mysql",
-    "user": "nodetsam",
-    "connector": "mysql"
+    "username": "nodetsam",
+    "password": ""
   },
   "storage": {
     "name": "storage",

@@ -24,7 +24,12 @@
     "privacy": {
       "type": "string",
       "required": true,
-      "default": "public"
+      "default": "https://www.w3.org/ns/activitystreams#Public"
+    },
+    "disableMedia": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     },
     "defaultLang": {
       "type": "string"

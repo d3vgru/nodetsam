@@ -27,6 +27,9 @@
     "feedType": {
       "type": "string"
     },
+    "uploadMediaAddress": {
+      "type": "string"
+    },
     "created": {
       "type": "date",
       "required": true

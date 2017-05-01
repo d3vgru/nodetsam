@@ -24,7 +24,7 @@
     "privacy": {
       "type": "string",
       "required": true,
-      "default": "public"
+      "default": "https://www.w3.org/ns/activitystreams#Public"
     },
     "otpKey": {
       "type": "string"

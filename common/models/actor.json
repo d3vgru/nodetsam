@@ -102,6 +102,12 @@
       "through": "Mute",
       "foreignKey": ""
     },
+    "mutedThreads": {
+      "type": "hasMany",
+      "model": "Post",
+      "through": "Mute",
+      "foreignKey": ""
+    },
     "activeConfig": {
       "type": "hasOne",
       "model": "ActorConfig",

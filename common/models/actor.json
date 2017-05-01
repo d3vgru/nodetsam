@@ -46,6 +46,14 @@
       "type": "string",
       "required": true,
       "default": "salmon"
+    },
+    "lastLogin": {
+      "type": "date",
+      "required": true
+    },
+    "created": {
+      "type": "date",
+      "required": true
     }
   },
   "validations": [],

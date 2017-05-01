@@ -26,6 +26,12 @@
       "required": true,
       "default": "public"
     },
+    "otpKey": {
+      "type": "string"
+    },
+    "require2fa": {
+      "type": "boolean"
+    },
     "defaultLang": {
       "type": "string"
     }

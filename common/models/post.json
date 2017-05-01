@@ -1,16 +1,31 @@
 {
   "name": "Post",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
+    "hash": {
+      "type": "string",
+      "id": true
+    },
+    "hashType": {
+      "type": "string"
+    },
+    "canonicalAddress": {
+      "type": "string"
+    },
     "summary": {
       "type": "string"
     },
     "content": {
       "type": "string",
+      "required": true
+    },
+    "timestamp": {
+      "type": "date",
       "required": true
     },
     "location": {
@@ -32,32 +47,34 @@
     "privacy": {
       "type": "string",
       "required": true,
-      "default": "public"
+      "default": "https://www.w3.org/ns/activitystreams#Public"
     },
     "lang": {
-      "type": "string"
-    },
-    "hash": {
-      "type": "string"
-    },
-    "parentHash": {
-      "type": "string"
-    },
-    "rootHash": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "files": {
-      "type": "hasMany",
-      "model": "File",
-      "foreignKey": ""
-    },
     "actor": {
       "type": "belongsTo",
       "model": "Actor",
       "foreignKey": ""
+    },
+    "media": {
+      "type": "hasMany",
+      "model": "Media",
+      "foreignKey": "",
+      "through": "PostMedia"
+    },
+    "parent": {
+      "type": "hasOne",
+      "model": "Post",
+      "foreignKey": "parentPostId"
+    },
+    "root": {
+      "type": "hasOne",
+      "model": "Post",
+      "foreignKey": "rootPostId"
     }
   },
   "acls": [],

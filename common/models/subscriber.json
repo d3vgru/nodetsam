@@ -1,0 +1,38 @@
+{
+  "name": "Subscriber",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "actorId": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "targetId": {
+      "type": "string",
+      "required": true
+    },
+    "hubUri": {
+      "type": "string"
+    },
+    "hubType": {
+      "type": "string"
+    },
+    "replyUri": {
+      "type": "string"
+    },
+    "replyType": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

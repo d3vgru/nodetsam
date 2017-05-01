@@ -33,7 +33,7 @@
     "nsp": "^2.1.0"
   },
   "scripts": {
-    "migrate": "node server/migrate.js",
+    "migrate": "node bin/automigrate.js",
     "start": "node server/server.js",
     "server": "node server/server.js",
     "client": "node start-client.js",

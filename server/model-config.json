@@ -65,5 +65,29 @@
   "Attachment": {
     "dataSource": "storage",
     "public": true
+  },
+  "Block": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Mute": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Subscriber": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Subscription": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "PostMedia": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Like": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

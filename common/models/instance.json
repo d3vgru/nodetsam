@@ -1,24 +1,38 @@
 {
   "name": "Instance",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
-    "address": {
+    "hash": {
+      "type": "string",
+      "id": true
+    },
+    "hashType": {
+      "type": "string"
+    },
+    "canonicalAddress": {
       "type": "string",
       "required": true
     },
+    "federationType": {
+      "type": "string"
+    },
     "feedAddress": {
+      "type": "string"
+    },
+    "feedType": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "logoFile": {
+    "logoMedia": {
       "type": "hasOne",
-      "model": "File",
+      "model": "Media",
       "foreignKey": ""
     },
     "actors": {
@@ -29,32 +43,50 @@
     "blockedActors": {
       "type": "hasMany",
       "model": "Actor",
-      "foreignKey": ""
+      "through": "Block",
+      "foreignKey": "actorId"
     },
     "mutedActors": {
       "type": "hasMany",
       "model": "Actor",
-      "foreignKey": ""
+      "through": "Mute",
+      "foreignKey": "actorId"
     },
     "blockedInstances": {
       "type": "hasMany",
       "model": "Instance",
-      "foreignKey": ""
+      "through": "Block",
+      "foreignKey": "actorId"
     },
     "mutedInstances": {
       "type": "hasMany",
       "model": "Instance",
-      "foreignKey": ""
+      "through": "Mute",
+      "foreignKey": "actorId"
     },
-    "subscribedActors": {
+    "subscriberActors": {
       "type": "hasMany",
       "model": "Actor",
-      "foreignKey": ""
+      "through": "Subscriber",
+      "foreignKey": "actorId"
     },
-    "subscribedInstances": {
+    "subscriberInstances": {
       "type": "hasMany",
       "model": "Instance",
-      "foreignKey": ""
+      "through": "Subscriber",
+      "foreignKey": "actorId"
+    },
+    "subscriptionsToActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "through": "Subscription",
+      "foreignKey": "actorId"
+    },
+    "subscriptionsToInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "through": "Subscription",
+      "foreignKey": "actorId"
     },
     "posts": {
       "type": "hasMany",
@@ -62,15 +94,17 @@
       "foreignKey": "",
       "through": "Actor"
     },
-    "optedInActors": {
+    "optedInToActors": {
       "type": "hasMany",
       "model": "Actor",
-      "foreignKey": ""
+      "through": "Subscription",
+      "foreignKey": "actorId"
     },
-    "optedInInstances": {
+    "optedInToInstances": {
       "type": "hasMany",
       "model": "Instance",
-      "foreignKey": ""
+      "through": "Subscription",
+      "foreignKey": "actorId"
     },
     "activeConfig": {
       "type": "hasOne",

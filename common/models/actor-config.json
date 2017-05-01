@@ -32,35 +32,15 @@
   },
   "validations": [],
   "relations": {
-    "iconFile": {
+    "iconMedia": {
       "type": "hasOne",
-      "model": "File",
-      "foreignKey": ""
+      "model": "Media",
+      "foreignKey": "iconHash"
     },
-    "headerFile": {
+    "headerMedia": {
       "type": "hasOne",
-      "model": "File",
-      "foreignKey": ""
-    },
-    "blockedActors": {
-      "type": "hasMany",
-      "model": "Actor",
-      "foreignKey": ""
-    },
-    "mutedActors": {
-      "type": "hasMany",
-      "model": "Actor",
-      "foreignKey": ""
-    },
-    "blockedInstances": {
-      "type": "hasMany",
-      "model": "Instance",
-      "foreignKey": ""
-    },
-    "mutedInstances": {
-      "type": "hasMany",
-      "model": "Instance",
-      "foreignKey": ""
+      "model": "Media",
+      "foreignKey": "headerHash"
     },
     "actor": {
       "type": "belongsTo",

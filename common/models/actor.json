@@ -1,25 +1,43 @@
 {
   "name": "Actor",
   "base": "User",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
-    "type": {
+    "hash": {
+      "type": "string",
+      "id": true
+    },
+    "hashType": {
+      "type": "string"
+    },
+    "actorType": {
       "type": "string",
       "required": true,
       "default": "Person"
     },
-    "address": {
+    "canonicalAddress": {
       "type": "string",
       "required": true
     },
     "feedAddress": {
       "type": "string"
     },
+    "feedType": {
+      "type": "string",
+      "required": true,
+      "default": "atom"
+    },
     "hubAddress": {
       "type": "string"
+    },
+    "hubType": {
+      "type": "string",
+      "required": true,
+      "default": "push"
     },
     "replyAddress": {
       "type": "string"
@@ -45,16 +63,43 @@
     "likedPosts": {
       "type": "hasMany",
       "model": "Post",
-      "foreignKey": ""
+      "foreignKey": "",
+      "through": "Like"
     },
-    "followers": {
+    "subscribers": {
       "type": "hasMany",
       "model": "Actor",
+      "through": "Subscriber",
       "foreignKey": ""
     },
-    "following": {
+    "subscriptions": {
       "type": "hasMany",
       "model": "Actor",
+      "through": "Subscription",
+      "foreignKey": ""
+    },
+    "blockedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "through": "Block",
+      "foreignKey": ""
+    },
+    "mutedActors": {
+      "type": "hasMany",
+      "model": "Actor",
+      "through": "Mute",
+      "foreignKey": ""
+    },
+    "blockedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "through": "Block",
+      "foreignKey": ""
+    },
+    "mutedInstances": {
+      "type": "hasMany",
+      "model": "Instance",
+      "through": "Mute",
       "foreignKey": ""
     },
     "activeConfig": {

@@ -5,11 +5,11 @@
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
     "hash": {
       "type": "string",
-      "id": true,
-      "required": true
+      "id": true
     },
     "mimeType": {
       "type": "string",

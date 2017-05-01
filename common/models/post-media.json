@@ -1,0 +1,28 @@
+{
+  "name": "PostMedia",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "postId": {
+      "type": "string",
+      "required": true
+    },
+    "postHashType": {
+      "type": "string"
+    },
+    "mediaId": {
+      "type": "string",
+      "required": true
+    },
+    "mediaHashType": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

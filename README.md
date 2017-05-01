@@ -50,3 +50,7 @@ section of `server/middleware.json` so it looks like
     },
 
 Make sure you [build](client/quasar#building) the Quasar client first.
+
+## Documentation
+
+Please refer to the [wiki](wiki).

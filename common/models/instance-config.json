@@ -21,7 +21,7 @@
       "required": true,
       "default": "ostatus"
     },
-    "privacy": {
+    "scope": {
       "type": "string",
       "required": true,
       "default": "https://www.w3.org/ns/activitystreams#Public"

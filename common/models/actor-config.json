@@ -21,7 +21,7 @@
     "location": {
       "type": "geopoint"
     },
-    "privacy": {
+    "scope": {
       "type": "string",
       "required": true,
       "default": "https://www.w3.org/ns/activitystreams#Public"

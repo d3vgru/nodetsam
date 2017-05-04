@@ -37,11 +37,6 @@
   },
   "validations": [],
   "relations": {
-    "logoMedia": {
-      "type": "hasOne",
-      "model": "Media",
-      "foreignKey": ""
-    },
     "actors": {
       "type": "hasMany",
       "model": "Actor",

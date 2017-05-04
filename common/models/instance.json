@@ -18,8 +18,10 @@
       "type": "string",
       "required": true
     },
-    "federationType": {
-      "type": "string"
+    "federationProtocol": {
+      "type": "string",
+      "required": true,
+      "default": "https://www.w3.org/TR/activitypub/"
     },
     "feedAddress": {
       "type": "string"

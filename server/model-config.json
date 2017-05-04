@@ -58,11 +58,11 @@
     "dataSource": "pgsql",
     "public": true
   },
-  "InstanceConfig": {
+  "InstanceProfile": {
     "dataSource": "pgsql",
     "public": true
   },
-  "ActorConfig": {
+  "ActorProfile": {
     "dataSource": "pgsql",
     "public": true
   },

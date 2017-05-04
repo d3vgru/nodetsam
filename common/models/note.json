@@ -1,5 +1,5 @@
 {
-  "name": "Post",
+  "name": "Note",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -64,17 +64,17 @@
       "type": "hasMany",
       "model": "Media",
       "foreignKey": "",
-      "through": "PostMedia"
+      "through": "NoteMedia"
     },
     "parent": {
       "type": "hasOne",
-      "model": "Post",
-      "foreignKey": "parentPostId"
+      "model": "Note",
+      "foreignKey": "parentNoteId"
     },
     "root": {
       "type": "hasOne",
-      "model": "Post",
-      "foreignKey": "rootPostId"
+      "model": "Note",
+      "foreignKey": "rootNoteId"
     }
   },
   "acls": [],

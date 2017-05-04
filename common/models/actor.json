@@ -63,14 +63,14 @@
       "model": "Instance",
       "foreignKey": ""
     },
-    "posts": {
+    "notes": {
       "type": "hasMany",
-      "model": "Post",
+      "model": "Note",
       "foreignKey": ""
     },
-    "likedPosts": {
+    "likedNotes": {
       "type": "hasMany",
-      "model": "Post",
+      "model": "Note",
       "foreignKey": "",
       "through": "Like"
     },
@@ -112,7 +112,7 @@
     },
     "mutedThreads": {
       "type": "hasMany",
-      "model": "Post",
+      "model": "Note",
       "through": "Mute",
       "foreignKey": ""
     },

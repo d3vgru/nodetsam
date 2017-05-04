@@ -90,9 +90,9 @@
       "through": "Subscription",
       "foreignKey": "actorId"
     },
-    "posts": {
+    "notes": {
       "type": "hasMany",
-      "model": "Post",
+      "model": "Note",
       "foreignKey": "",
       "through": "Actor"
     },

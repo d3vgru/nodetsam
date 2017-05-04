@@ -19,7 +19,7 @@
     "federationType": {
       "type": "string",
       "required": true,
-      "default": "ostatus"
+      "default": "https://www.w3.org/ns/activitystreams"
     },
     "scope": {
       "type": "string",

@@ -1,16 +1,16 @@
 {
-  "name": "PostMedia",
+  "name": "NoteMedia",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "postId": {
+    "noteId": {
       "type": "string",
       "required": true
     },
-    "postHashType": {
+    "noteHashType": {
       "type": "string"
     },
     "mediaId": {

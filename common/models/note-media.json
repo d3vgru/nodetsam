@@ -6,6 +6,9 @@
     "validateUpsert": true
   },
   "properties": {
+    "contentWarning": {
+      "type": "string"
+    },
     "noteId": {
       "type": "string",
       "required": true

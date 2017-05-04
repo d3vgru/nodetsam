@@ -31,6 +31,9 @@
       "required": true,
       "default": "atom"
     },
+    "likesAddress": {
+      "type": "string"
+    },
     "hubAddress": {
       "type": "string"
     },
@@ -58,6 +61,14 @@
   },
   "validations": [],
   "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "actorId",
+      "options": {
+        "disableInclude": true
+      }
+    },
     "instance": {
       "type": "belongsTo",
       "model": "Instance",

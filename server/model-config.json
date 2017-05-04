@@ -13,15 +13,16 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "pgsql",
-    "options": {
-      "emailVerificationRequired": true
-    }
-  },
   "AccessToken": {
     "dataSource": "pgsql",
-    "public": false
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Actor",
+        "foreignKey": "actorId"
+      }
+    }
   },
   "ACL": {
     "dataSource": "pgsql",
@@ -40,13 +41,16 @@
   },
   "Actor": {
     "dataSource": "pgsql",
-    "public": true
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "Instance": {
     "dataSource": "pgsql",
     "public": true
   },
-  "Post": {
+  "Note": {
     "dataSource": "pgsql",
     "public": true
   },
@@ -82,7 +86,7 @@
     "dataSource": "pgsql",
     "public": true
   },
-  "PostMedia": {
+  "NoteMedia": {
     "dataSource": "pgsql",
     "public": true
   },

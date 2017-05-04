@@ -17,7 +17,7 @@
     "canonicalAddress": {
       "type": "string"
     },
-    "warning": {
+    "contentWarning": {
       "type": "string"
     },
     "content": {

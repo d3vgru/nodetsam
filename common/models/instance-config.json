@@ -16,6 +16,9 @@
     "terms": {
       "type": "string"
     },
+    "contentWarning": {
+      "type": "string"
+    },
     "federationType": {
       "type": "string",
       "required": true,

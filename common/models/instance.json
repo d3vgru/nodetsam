@@ -108,9 +108,9 @@
       "through": "Subscription",
       "foreignKey": "actorId"
     },
-    "activeConfig": {
+    "activeProfile": {
       "type": "hasOne",
-      "model": "InstanceConfig",
+      "model": "InstanceProfile",
       "foreignKey": ""
     }
   },

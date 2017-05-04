@@ -1,38 +1,39 @@
 {
-  "name": "InstanceConfig",
+  "name": "ActorProfile",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "preferredUsername": {
       "type": "string",
       "required": true
     },
-    "summary": {
-      "type": "string"
-    },
-    "terms": {
-      "type": "string"
+    "displayName": {
+      "type": "string",
+      "required": true
     },
     "contentWarning": {
       "type": "string"
     },
-    "federationType": {
+    "summary": {
       "type": "string",
-      "required": true,
-      "default": "https://www.w3.org/ns/activitystreams"
+      "required": true
+    },
+    "location": {
+      "type": "geopoint"
     },
     "scope": {
       "type": "string",
       "required": true,
       "default": "https://www.w3.org/ns/activitystreams#Public"
     },
-    "disableMedia": {
-      "type": "boolean",
-      "required": true,
-      "default": false
+    "otpKey": {
+      "type": "string"
+    },
+    "require2fa": {
+      "type": "boolean"
     },
     "defaultLang": {
       "type": "string"
@@ -40,14 +41,19 @@
   },
   "validations": [],
   "relations": {
-    "logoMedia": {
+    "iconMedia": {
       "type": "hasOne",
       "model": "Media",
-      "foreignKey": ""
+      "foreignKey": "iconHash"
     },
-    "instance": {
+    "headerMedia": {
+      "type": "hasOne",
+      "model": "Media",
+      "foreignKey": "headerHash"
+    },
+    "actor": {
       "type": "belongsTo",
-      "model": "Instance",
+      "model": "Actor",
       "foreignKey": ""
     }
   },

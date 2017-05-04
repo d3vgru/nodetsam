@@ -29,9 +29,15 @@
     "feedType": {
       "type": "string",
       "required": true,
-      "default": "atom"
+      "default": "https://www.w3.org/ns/activitystreams"
     },
     "likesAddress": {
+      "type": "string"
+    },
+    "subscriptionsAddress": {
+      "type": "string"
+    },
+    "subscribersAddress": {
       "type": "string"
     },
     "hubAddress": {
@@ -127,9 +133,9 @@
       "through": "Mute",
       "foreignKey": ""
     },
-    "activeConfig": {
+    "activeProfile": {
       "type": "hasOne",
-      "model": "ActorConfig",
+      "model": "ActorProfile",
       "foreignKey": ""
     }
   },

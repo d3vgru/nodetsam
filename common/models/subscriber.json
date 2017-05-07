@@ -14,7 +14,7 @@
       "type": "string",
       "required": true
     },
-    "targetId": {
+    "objectId": {
       "type": "string",
       "required": true
     },
@@ -28,7 +28,8 @@
       "type": "string"
     },
     "replyType": {
-      "type": "string"
+      "type": "string",
+      "default": "https://www.w3.org/TR/activitypub/#inbox"
     }
   },
   "validations": [],

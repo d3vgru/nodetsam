@@ -44,16 +44,13 @@
       "type": "string"
     },
     "hubType": {
-      "type": "string",
-      "required": true,
-      "default": "push"
+      "type": "string"
     },
     "replyAddress": {
       "type": "string"
     },
     "replyType": {
       "type": "string",
-      "required": true,
       "default": "https://www.w3.org/TR/activitypub/#inbox"
     },
     "lastLogin": {

@@ -14,7 +14,7 @@
       "type": "string",
       "required": true
     },
-    "targetId": {
+    "objectId": {
       "type": "string",
       "required": true
     },

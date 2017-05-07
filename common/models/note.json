@@ -35,7 +35,7 @@
       "type": "number",
       "default": 0
     },
-    "repostCount": {
+    "shareCount": {
       "type": "number",
       "default": 0
     },

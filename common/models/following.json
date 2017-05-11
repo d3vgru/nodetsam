@@ -1,5 +1,5 @@
 {
-  "name": "Subscription",
+  "name": "Following",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

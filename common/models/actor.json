@@ -88,13 +88,13 @@
       "foreignKey": "",
       "through": "Like"
     },
-    "subscribers": {
+    "followers": {
       "type": "hasMany",
       "model": "Actor",
       "through": "Subscriber",
       "foreignKey": ""
     },
-    "subscriptions": {
+    "following": {
       "type": "hasMany",
       "model": "Actor",
       "through": "Subscription",
@@ -124,7 +124,7 @@
       "through": "Mute",
       "foreignKey": ""
     },
-    "mutedThreads": {
+    "mutedTNotes": {
       "type": "hasMany",
       "model": "Note",
       "through": "Mute",

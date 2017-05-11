@@ -68,25 +68,25 @@
       "through": "Mute",
       "foreignKey": "actorId"
     },
-    "subscriberActors": {
+    "followerActors": {
       "type": "hasMany",
       "model": "Actor",
       "through": "Subscriber",
       "foreignKey": "actorId"
     },
-    "subscriberInstances": {
+    "followerInstances": {
       "type": "hasMany",
       "model": "Instance",
       "through": "Subscriber",
       "foreignKey": "actorId"
     },
-    "subscriptionsToActors": {
+    "followingActors": {
       "type": "hasMany",
       "model": "Actor",
       "through": "Subscription",
       "foreignKey": "actorId"
     },
-    "subscriptionsToInstances": {
+    "followingInstances": {
       "type": "hasMany",
       "model": "Instance",
       "through": "Subscription",
